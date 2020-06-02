@@ -184,7 +184,7 @@ function Permission(wildcardString, caseSensitive) {
 	var idx = 0;
 	angular.forEach(tokens, function(token) {
 	    token = (token.trim) ? token.trim() : token;
-	    token = (caseSensitive === false) ? angular.lowercase(token) : token;
+	    token = (caseSensitive === false) ? token.toLowerCase() : token;
 	    subParts[idx++] = token;
 	});
 	return subParts;
