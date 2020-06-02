@@ -150,9 +150,9 @@
                   principal: token.getPrincipal(),
                   credentials: token.getCredentials()
                 }
-              }).success(function (data, status, headers, config) {
+              }).then(function (data, status, headers, config) {
                 deferred.resolve(data);
-              }).error(function (data, status, headers, config) {
+              }).catch(function (data, status, headers, config) {
                 deferred.reject(data);
               });
               promise = deferred.promise;
